@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Education Platform</title>
+</head>
+<body>
+    <h2>Plataforma Educacional com IA</h2>
+
+    <form method="POST">
+        <label>Aluno:</label>
+        <select name="student">
+            {% for s in students %}
+                <option value="{{ loop.index0 }}">{{ s.nome }}</option>
+            {% endfor %}
+        </select>
+
+        <br><br>
+
+        <label>Tópico:</label>
+        <input type="text" name="topic" required>
+
+        <br><br>
+
+        <label>Tipo de Conteúdo:</label>
+        <select name="content_type">
+            <option value="explicacao">Explicação</option>
+            <option value="exemplos">Exemplos</option>
+            <option value="reflexao">Reflexão</option>
+            <option value="resumo_visual">Resumo Visual</option>
+        </select>
+
+        <br><br>
+
+        <label>Versão do Prompt:</label>
+        <select name="version">
+            <option value="v1">v1</option>
+            <option value="v2">v2</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">Gerar</button>
+    </form>
+
+    <hr>
+
+    {% if result %}
+        <h3>Resultado:</h3>
+        <pre>{{ result }}</pre>
+    {% endif %}
+
+</body>
+</html>

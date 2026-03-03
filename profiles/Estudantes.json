@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "nome": "Lucas",
+    "idade": 14,
+    "nivel": "iniciante",
+    "estilo_aprendizado": "visual"
+  },
+  {
+    "id": 2,
+    "nome": "Mariana",
+    "idade": 21,
+    "nivel": "avançado",
+    "estilo_aprendizado": "leitura-escrita",
+    "interesses_extras": "programação em C e sistemas acadêmicos da UFAPE"
+  },
+  {
+    "id": 3,
+    "nome": "Pedro",
+    "idade": 17,
+    "nivel": "intermediário",
+    "estilo_aprendizado": "cinestésico",
+    "interesses_extras": "criação de histórias e RPGs de mesa"
+  }
+]
