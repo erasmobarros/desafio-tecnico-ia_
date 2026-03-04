@@ -1,14 +1,14 @@
 [
   {
     "id": 1,
-    "nome": "Lucas",
+    "nome": "Jose",
     "idade": 14,
     "nivel": "iniciante",
     "estilo_aprendizado": "visual"
   },
   {
     "id": 2,
-    "nome": "Mariana",
+    "nome": "Erasmo",
     "idade": 21,
     "nivel": "avançado",
     "estilo_aprendizado": "leitura-escrita",
@@ -16,7 +16,7 @@
   },
   {
     "id": 3,
-    "nome": "Pedro",
+    "nome": "Nascimento",
     "idade": 17,
     "nivel": "intermediário",
     "estilo_aprendizado": "cinestésico",

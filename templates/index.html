@@ -6,11 +6,11 @@
 <body>
     <h2>Plataforma Educacional com IA</h2>
 
-    <form method="POST">
+    <form id="form-gerador" method="POST">
         <label>Aluno:</label>
         <select name="student">
             {% for s in students %}
-                <option value="{{ loop.index0 }}">{{ s.nome }}</option>
+                <option value="{{ loop.index0 }}">{{ s.nome }} ({{ s.nivel }})</option>
             {% endfor %}
         </select>
 
@@ -39,7 +39,7 @@
 
         <br><br>
 
-        <button type="submit">Gerar</button>
+        <button type="submit" id="botao-gerar">Gerar</button>
     </form>
 
     <hr>
@@ -49,5 +49,14 @@
         <pre>{{ result }}</pre>
     {% endif %}
 
+    <script>
+        document.getElementById('form-gerador').addEventListener('submit', function() {
+            var botao = document.getElementById('botao-gerar');
+            botao.innerHTML = 'Gerando conteúdo, aguarde...';
+            botao.disabled = true;
+            botao.style.opacity = '0.7';
+            botao.style.cursor = 'not-allowed';
+        });
+    </script>
 </body>
 </html>
