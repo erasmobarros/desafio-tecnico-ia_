@@ -3,14 +3,14 @@
     "id": 1,
     "nome": "Jose",
     "idade": 14,
-    "nivel": "iniciante",
+    "nivel": "Iniciante",
     "estilo_aprendizado": "visual"
   },
   {
     "id": 2,
     "nome": "Erasmo",
     "idade": 21,
-    "nivel": "avançado",
+    "nivel": "Avançado",
     "estilo_aprendizado": "leitura-escrita",
     "interesses_extras": "programação em C e sistemas acadêmicos da UFAPE"
   },
@@ -18,7 +18,7 @@
     "id": 3,
     "nome": "Nascimento",
     "idade": 17,
-    "nivel": "intermediário",
+    "nivel": "Intermediário",
     "estilo_aprendizado": "cinestésico",
     "interesses_extras": "criação de histórias e RPGs de mesa"
   }

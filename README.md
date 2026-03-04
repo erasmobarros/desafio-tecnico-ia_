@@ -1,3 +1,5 @@
+# 🚀 Aplicação Online: https://desafio-tecnico-ia-1.onrender.com
+
 # 🎓 EduPrompt - Plataforma Educativa com IA
 
 Este é o repositório do **EduPrompt**, um sistema desenvolvido para o Desafio Técnico de Estágio em IA e Engenharia de Prompt. A plataforma gera materiais educativos altamente personalizados com base no perfil do aluno (idade, nível, estilo de aprendizado) utilizando a API do Google Gemini.
@@ -8,7 +10,7 @@ Além dos requisitos mínimos do desafio, este projeto implementa funcionalidade
 
 * **Motor de Engenharia de Prompt Avançado:** Implementação de testes A/B (v1 básica vs v2 otimizada) utilizando *Persona Prompting*, *Chain-of-Thought* e *Output Formatting*.
 * **Sistema de Cache Inteligente:** Utiliza *hashing* MD5 para armazenar respostas da IA localmente, evitando chamadas duplicadas à API e economizando recursos.
-* **Resiliência de Conexão (Exponential Backoff):** Tratamento de erros avançado (incluindo tratamento para status 404 e 503), garantindo que picos de uso do servidor do Google não quebrem a aplicação.
+* **Resiliência de Conexão (Exponential Backoff):** Tratamento de erros, garantindo que picos de uso do servidor do Google não quebrem a aplicação.
 * **Interface Web Dinâmica:** Interface gráfica construída em Flask para facilitar a seleção de perfis e visualização do conteúdo.
 * **Histórico de Auditoria:** Salvamento automático de todas as gerações no arquivo `outputs/history.json`.
 
@@ -80,4 +82,4 @@ Acesse http://127.0.0.1:5000 no seu navegador para utilizar a plataforma.
 Para uma análise detalhada das estratégias de estruturação de prompts, Chain-of-Thought e Context Setting utilizadas neste projeto, consulte o arquivo PROMPT_ENGINEERING_NOTES.md.
 
 ## 👨‍💻 Autoria
-Desenvolvido por Erasmo.
+Desenvolvido por Jose Erasmo Do Nascimento Barros Filho.
