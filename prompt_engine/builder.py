@@ -6,7 +6,7 @@ from prompt_engine.templates import (
 )
 
 def build_prompt(version, content_type, student, topic):
-    # Monta o contexto base que será injetado nos templates
+    
     context = f"""
 Aluno:
 Nome: {student['nome']}
@@ -17,7 +17,7 @@ Estilo: {student['estilo_aprendizado']}
 Tópico: {topic}
 """
 
-    # Direciona para o template correto com base na escolha do usuário
+   
     if content_type == "explicacao":
         return explanation_template(version, context)
 

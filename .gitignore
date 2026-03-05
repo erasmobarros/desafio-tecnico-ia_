@@ -1,10 +1,5 @@
-# Ignorar variáveis de ambiente (Segurança)
 .env
-
-# Ignorar pastas geradas pelo Python
 __pycache__/
 venv/
 env/
-
-# (Opcional) Ignorar o cache para não subir arquivos pesados
 cache/

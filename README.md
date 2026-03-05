@@ -81,5 +81,5 @@ Acesse http://127.0.0.1:5000 no seu navegador para utilizar a plataforma.
 ## 🧠 Engenharia de Prompt
 Para uma análise detalhada das estratégias de estruturação de prompts, Chain-of-Thought e Context Setting utilizadas neste projeto, consulte o arquivo PROMPT_ENGINEERING_NOTES.md.
 
-## 👨‍💻 Autoria
+## 👨‍💻 Autor
 Desenvolvido por Jose Erasmo Do Nascimento Barros Filho.

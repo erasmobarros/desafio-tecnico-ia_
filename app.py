@@ -9,27 +9,25 @@ from google import genai
 from google.genai import errors
 from prompt_engine.builder import build_prompt
 
-# Carrega variáveis de ambiente (.env)
+
 load_dotenv()
 
-# Inicializa o cliente do Gemini
+
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 app = Flask(__name__)
 
-# Configurações de diretórios
+
 CACHE_DIR = "cache"
 HISTORY_FILE = "outputs/history.json"
 STUDENTS_FILE = "profiles/Estudantes.json"
 
-# Garante que as pastas existam ao iniciar o app
+
 os.makedirs(CACHE_DIR, exist_ok=True)
 os.makedirs("outputs", exist_ok=True)
 
 
-# =============================
-# CACHE
-# =============================
+
 
 def get_cache_key(prompt):
     return hashlib.md5(prompt.encode()).hexdigest()
@@ -46,14 +44,11 @@ def save_cache(key, data):
         json.dump(data, f, ensure_ascii=False)
 
 
-# =============================
-# HISTÓRICO (Com blindagem anti-erros)
-# =============================
 
 def save_history(entry):
     history = []
     
-    # Verifica se o arquivo existe e se não está vazio (tamanho > 0)
+   
     if os.path.exists(HISTORY_FILE):
         if os.path.getsize(HISTORY_FILE) > 0:
             try:
@@ -69,14 +64,12 @@ def save_history(entry):
         json.dump(history, f, indent=2, ensure_ascii=False)
 
 
-# =============================
-# GEMINI (Com tratamento de erros)
-# =============================
+
 
 def generate_content(prompt, max_tentativas=3):
     for tentativa in range(max_tentativas):
         try:
-            # Utilizando a versão mais estável do modelo
+           
             response = client.models.generate_content(
                 model="gemini-2.5-flash",
                 contents=prompt,
@@ -102,18 +95,13 @@ def generate_content(prompt, max_tentativas=3):
     return "Erro: Não foi possível acessar a API após várias tentativas."
 
 
-# =============================
-# PERFIS
-# =============================
+
 
 def load_students():
     with open(STUDENTS_FILE, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
-# =============================
-# ROTA PRINCIPAL
-# =============================
 
 @app.route("/", methods=["GET", "POST"])
 def index():
